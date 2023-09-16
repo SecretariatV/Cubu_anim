@@ -1,0 +1,11 @@
+.path {
+  transform-style: preserve-3d;
+}
+
+.mask {
+  mask-image: url(../src/assets/mask.png);
+}
+
+.perspective {
+  perspective: 800px;
+}

@@ -1,0 +1,50 @@
+.cube_anim {
+  transform: rotateZ(calc(var(--i, 0) * 5deg)) rotateY(70deg);
+  animation: cube 14400ms linear infinite;
+  animation-delay: calc(200ms * var(--i));
+  animation-timing-function: linear;
+}
+
+@keyframes cube {
+  0%,
+  100% {
+    background-image: linear-gradient(
+      180deg,
+      #eb4899 0%,
+      #d53bab 15.62%,
+      rgba(197, 49, 184, 0.15) 53.12%,
+      #9d19da 83.33%,
+      #7400fc 100%
+    );
+  }
+  50% {
+    background-image: linear-gradient(
+      180deg,
+      #7400fc 100% #9d19da 83.33%,
+      rgba(197, 49, 184, 0.15) 53.12%,
+      #d53bab 15.62%,
+      #eb4899 0%
+    );
+  }
+
+  from {
+    transform: rotateZ(calc(var(--i, 0) * 5deg)) rotateY(70deg);
+  }
+  to {
+    transform: rotateZ(calc(var(--i, 0) * 5deg - 360deg)) rotateY(70deg);
+  }
+
+  0%,
+  10%,
+  50%,
+  60%,
+  100% {
+    opacity: 0;
+  }
+  15%,
+  45%,
+  65%,
+  95% {
+    opacity: 1;
+  }
+}
